@@ -1,3 +1,0 @@
-[submodule "bernoulli"]
-	path = bernoulli
-	url = git@github.com:loopspace/bernoulli.git
