@@ -1,6 +1,3 @@
 [submodule "bernoulli"]
 	path = bernoulli
 	url = https://github.com/loopspace/bernoulli.git
-[submodule "poisson"]
-	path = poisson
-	url = https://github.com/loopspace/loopspace.github.io.git
