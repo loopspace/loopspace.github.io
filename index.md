@@ -1,6 +1,5 @@
 ---
 title: LoopSpace\'s GitHub HTML Projects
-layout: posts
 charset: utf-8
 ---
 
