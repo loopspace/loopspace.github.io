@@ -8,4 +8,8 @@ charset: utf-8
 
 * [Bernoulli](bernoulli).  An HTML5+JavaScript demonstration of the
   histogram for the sum of Bernoulli distributions (with varying `p` and `n`).
-  Original code available on [github](https://github.com/loopspace/bernoulli).
+  Original code available on [github](https://github.com/loopspace/bernoulli/tree/master).
+
+* [Poisson](poisson).  A modification of the sum of Bernoulli
+  distributions program to display a Poisson distribution.  Original
+  code available on [github](https://github.com/loopspace/bernoulli/tree/poisson).
