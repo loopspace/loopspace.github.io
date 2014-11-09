@@ -12,3 +12,5 @@ charset: utf-8
 * [Poisson](poisson).  A modification of the sum of Bernoulli
   distributions program to display a Poisson distribution.  Original
   code available on [github](https://github.com/loopspace/bernoulli/tree/poisson).
+
+* [Statistics](statistics).  An HTML5+JavaScript data summariser with histogram, frequency table, and a moveable "marker" to find the median and quartiles.  Original code available on [github](https://github.com/loopspace/statistics).

@@ -5,3 +5,6 @@
 	path = poisson
 	url = https://github.com/loopspace/bernoulli.git
 	branch = poisson
+[submodule "statistics"]
+	path = statistics
+	url = https://github.com/loopspace/statistics.git
