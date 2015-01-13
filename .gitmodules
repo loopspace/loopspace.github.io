@@ -8,3 +8,6 @@
 [submodule "statistics"]
 	path = statistics
 	url = https://github.com/loopspace/statistics.git
+[submodule "MathJaxToMathML"]
+	path = MathJaxToMathML
+	url = https://github.com/loopspace/MathJaxToMathML.git

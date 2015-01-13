@@ -14,3 +14,5 @@ charset: utf-8
   code available on [github](https://github.com/loopspace/bernoulli/tree/poisson).
 
 * [Statistics](statistics).  An HTML5+JavaScript data summariser with histogram, frequency table, and a moveable "marker" to find the median and quartiles.  Original code available on [github](https://github.com/loopspace/statistics).
+
+* [MathJax to MathML](MathJaxToMathML). A simple webpage that uses MathJax to convert LaTeX-like syntax to MathML.  Original code available on [github](https://github.com/loopspace/MathJaxToMathML.git).
