@@ -11,3 +11,9 @@
 [submodule "MathJaxToMathML"]
 	path = MathJaxToMathML
 	url = https://github.com/loopspace/MathJaxToMathML.git
+[submodule "trigonometry"]
+	path = trigonometry
+	url = https://github.com/loopspace/trigonometry.git
+[submodule "chaos"]
+	path = chaos
+	url = https://github.com/loopspace/chaos.git
