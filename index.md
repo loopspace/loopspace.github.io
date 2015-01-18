@@ -16,3 +16,7 @@ charset: utf-8
 * [Statistics](statistics).  An HTML5+JavaScript data summariser with histogram, frequency table, and a moveable "marker" to find the median and quartiles.  Original code available on [github](https://github.com/loopspace/statistics).
 
 * [MathJax to MathML](MathJaxToMathML). A simple webpage that uses MathJax to convert LaTeX-like syntax to MathML.  Original code available on [github](https://github.com/loopspace/MathJaxToMathML.git).
+
+* [Chaos](chaos). A simple demonstration of the logistic map leading to chaotic behaviour. Original code available on [github](https://github.com/loopspace/chaos.git).
+
+* [Trigonometry](trigonometry). A demonstration of the connection between circles and the trigonometric functions.  Original code available on [github](https://github.com/loopspace/trigonometry.git).
