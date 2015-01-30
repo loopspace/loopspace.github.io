@@ -17,3 +17,6 @@
 [submodule "chaos"]
 	path = chaos
 	url = https://github.com/loopspace/chaos.git
+[submodule "Sociogram"]
+	path = Sociogram
+	url = https://github.com/loopspace/Sociogram.git
