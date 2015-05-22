@@ -20,3 +20,6 @@
 [submodule "Sociogram"]
 	path = Sociogram
 	url = https://github.com/loopspace/Sociogram.git
+[submodule "Polyominoes"]
+	path = Polyominoes
+	url = https://github.com/loopspace/Polyominoes.git

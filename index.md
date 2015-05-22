@@ -20,3 +20,5 @@ charset: utf-8
 * [Chaos](chaos). A simple demonstration of the logistic map leading to chaotic behaviour. Original code available on [github](https://github.com/loopspace/chaos.git).
 
 * [Trigonometry](trigonometry). A demonstration of the connection between circles and the trigonometric functions.  Original code available on [github](https://github.com/loopspace/trigonometry.git).
+
+* [Polyominoes](Polyominoes). This code generates the unique polyominoes of a given size.  Original code available on [github](https://github.com/loopspace/Polyominoes.git).
