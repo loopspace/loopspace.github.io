@@ -22,3 +22,5 @@ charset: utf-8
 * [Trigonometry](trigonometry). A demonstration of the connection between circles and the trigonometric functions.  Original code available on [github](https://github.com/loopspace/trigonometry.git).
 
 * [Polyominoes](Polyominoes). This code generates the unique polyominoes of a given size.  Original code available on [github](https://github.com/loopspace/Polyominoes.git).
+
+* [LuaCanvas](LuaCanvas). This code provides a playground for graphical programming using the `lua` language.  Original code available on [github](https://github.com/loopspace/LuaCanvas.git).
