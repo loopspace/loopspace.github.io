@@ -23,3 +23,6 @@
 [submodule "Polyominoes"]
 	path = Polyominoes
 	url = https://github.com/loopspace/Polyominoes.git
+[submodule "LuaCanvas"]
+	path = LuaCanvas
+	url = https://github.com/loopspace/LuaCanvas.git
