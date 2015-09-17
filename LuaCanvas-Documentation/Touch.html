@@ -1,0 +1,236 @@
+
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <link rel="stylesheet" type="text/css" href="css/style.css">     
+              <script src="lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>                        
+              <title>Touch &mdash; LuaCanvas</title>
+            </head>
+            <body>
+              <a name="top"></a>
+              <div class="documentation">
+          
+        
+              <div class='header'>
+                <img id='luacanvas' src='images/LuaCanvas-Logo.png' height='200px'/>
+                <div id='chapter'>
+                    <div id='chapter-title'>
+                    <h1>Touch</h1>
+                    </div>
+                </div>
+              <h3 class="subtitle"><a href="index.html">Reference</a> ❯ Detecting and Reacting to Touches on the Screen</h3>
+              </div>
+          
+
+              <div class='outline'>
+              <ul class="sec-ref">    
+          
+
+                <li><a href='#1'>Handling Touches</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-const"><a href='#CurrentTouch'>CurrentTouch</a></li>
+                  
+
+                    <li class="type-tiny-icon type-type"><a href='#touch'>touch</a></li>
+                  
+ 
+                </ul>             
+              
+
+              </ul>        
+              </div>
+          
+
+              <div class='section'>
+              <h2><a name='1'>Handling Touches</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-const'></div><a name='CurrentTouch'>CurrentTouch</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>CurrentTouch</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This global variable always represents the current single touch on the screen. It is a <strong>touch</strong> datatype, see the related items for more information.</p>
+                    </div>
+                      
+                  
+                    <div class='examples'>
+                      <h4>Examples</h4>                    
+                      
+  
+                      <div id='example-0'>
+function draw()
+    background( 0 )
+    fill( 255, 0, 0 )
+    ellipse( CurrentTouch.x, CurrentTouch.y, 300 )
+end
+
+                      </div>
+                          
+                  
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#touch'>touch</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-type'></div><a name='touch'>touch</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>touch.id
+touch.x
+touch.y
+touch.prevX
+touch.prevY
+touch.deltaX
+touch.deltaY
+touch.state
+touch.tapCount</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This type represents data about a single touch on the screen.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">id</td>
+                        <td class="parameter-desc"><p>int, a unique identifier for this touch</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">x</td>
+                        <td class="parameter-desc"><p>float, specifies the x position of the touch on the screen</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">y</td>
+                        <td class="parameter-desc"><p>float, specifies the y position of the touch on the screen</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">prevX</td>
+                        <td class="parameter-desc"><p>float, specifies the x position, from the previous frame, of the touch on the screen</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">prevY</td>
+                        <td class="parameter-desc"><p>float, specifies the y position, from the previous frame, of the touch on the screen</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">deltaX</td>
+                        <td class="parameter-desc"><p>float, specifies the x delta since the last frame, the amount the touch has moved</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">deltaY</td>
+                        <td class="parameter-desc"><p>float, specifies the y delta since the last frame, the amount the touch has moved</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">state</td>
+                        <td class="parameter-desc"><p>the state of the touch, can be BEGAN, MOVING or ENDED</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">tapCount</td>
+                        <td class="parameter-desc"><p>how many times the touch has been tapped</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#CurrentTouch'>CurrentTouch</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+            </div>
+            <script src="lib/ace.js" type="text/javascript" charset="utf-8"></script>    
+            <script>            
+                var editors = [];
+          
+            
+                editors[0] = new ace.edit("example-0");
+                editors[0].setReadOnly(true);
+                editors[0].setHighlightActiveLine(false);
+                editors[0].setShowInvisibles(false);                
+                editors[0].setTheme("ace/theme/github");
+                editors[0].getSession().setMode("ace/mode/lua");
+                editors[0].resize()
+              
+           
+                $(document).ready(function()
+                {
+                    for( var i = 0; i < editors.length; i++ )
+                    {
+                        var e = editors[i];
+                        var height = e.getSession().getScreenLength() * e.renderer.lineHeight + e.renderer.scrollBar.getWidth();
+                        
+                        $('#example-'+i.toString()).height(height.toString()+'px');
+                        
+                        e.resize();
+                    }    
+                });
+            </script>
+            </body>
+          </html>
+          

@@ -1,0 +1,3060 @@
+
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <link rel="stylesheet" type="text/css" href="css/style.css">     
+              <script src="lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>                        
+              <title>Lua &mdash; LuaCanvas</title>
+            </head>
+            <body>
+              <a name="top"></a>
+              <div class="documentation">
+          
+        
+              <div class='header'>
+                <img id='luacanvas' src='images/LuaCanvas-Logo.png' height='200px'/>
+                <div id='chapter'>
+                    <div id='chapter-title'>
+                    <h1>Lua</h1>
+                    </div>
+                </div>
+              <h3 class="subtitle"><a href="index.html">Reference</a> ❯ Tables, Strings, Math and Time</h3>
+              </div>
+          
+
+              <div class='outline'>
+              <ul class="sec-ref">    
+          
+
+                <li><a href='#1'>Overview</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-overview"><a href='#forloops'>For Loops Overview</a></li>
+                  
+
+                    <li class="type-tiny-icon type-overview"><a href='#conditionals'>Conditionals Overview</a></li>
+                  
+ 
+                </ul>             
+              
+
+                <li><a href='#2'>Language</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-function"><a href='#ipairs'>ipairs( table )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#pairs'>pairs( table )</a></li>
+                  
+ 
+                </ul>             
+              
+
+                <li><a href='#3'>Tables</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-function"><a href='#table.concat'>table.concat( table, sep )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#table.insert'>table.insert( table, pos, value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#table.maxn'>table.maxn( table )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#table.remove'>table.remove( table, pos )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#table.sort'>table.sort( table )</a></li>
+                  
+ 
+                </ul>             
+              
+
+                <li><a href='#4'>Strings</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-function"><a href='#string.find'>string.find( s, pattern )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#string.format'>string.format( formatstring, ... )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#string.len'>string.len( s )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#string.lower'>string.lower( s )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#string.upper'>string.upper( s )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#string.match'>string.match( s, pattern )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#string.rep'>string.rep( s, n )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#string.sub'>string.sub( s, i, j )</a></li>
+                  
+ 
+                </ul>             
+              
+
+                <li><a href='#5'>Math</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-function"><a href='#math.abs'>math.abs( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.acos'>math.acos( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.asin'>math.asin( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.atan'>math.atan( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.atan2'>math.atan2( y, x )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.ceil'>math.ceil( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.cos'>math.cos( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.cosh'>math.cosh( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.deg'>math.deg( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.rad'>math.rad( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.exp'>math.exp( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.floor'>math.floor( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.fmod'>math.fmod( x, y )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.frexp'>math.frexp( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.ldexp'>math.ldexp( m, e )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.log'>math.log( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.log10'>math.log10( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.max'>math.max( value, ... )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.min'>math.min( value, ... )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.modf'>math.modf( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.pow'>math.pow( x, y )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.random'>math.random()</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.randomseed'>math.randomseed( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.sin'>math.sin( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.sinh'>math.sinh( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.tan'>math.tan( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.tanh'>math.tanh( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#math.sqrt'>math.sqrt( value )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-const"><a href='#math.huge'>math.huge</a></li>
+                  
+
+                    <li class="type-tiny-icon type-const"><a href='#math.pi'>math.pi</a></li>
+                  
+ 
+                </ul>             
+              
+
+                <li><a href='#6'>Date and Time</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-function"><a href='#os.clock'>os.clock()</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#os.difftime'>os.difftime( t2, t1 )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#os.date'>os.date( format )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#os.setlocale'>os.setlocale( locale )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#os.time'>os.time()</a></li>
+                  
+ 
+                </ul>             
+              
+
+              </ul>        
+              </div>
+          
+
+              <div class='section'>
+              <h2><a name='1'>Overview</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-overview'></div><a name='forloops'>For Loops Overview</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+                    
+                    <div class='description'>
+                      <p>You can use <strong>for loops</strong> in Lua to iterate over arrays and tables, performing tasks for each element.</p>
+<p>This example simply iterates i over the values 1 to 10</p>
+<pre><code>-- Iterate from 1 to 10
+for i = 1, 10 do
+    print( i )
+end
+</code></pre>
+<p>This example uses the <code>ipairs</code> function to sequentially iterate over a table. Note that ipairs only works on tables that have sequential elements beginning at 1.</p>
+<pre><code>-- Iterate over an array named 'arr'
+arr = { 3, 2, 1 }
+
+for i,v in ipairs(arr) do
+    print( "arr["..i.."] = "..v )
+end
+
+-- Prints:
+--  arr[1] = 3
+--  arr[2] = 2
+--  arr[3] = 1
+</code></pre>
+<p>This example uses <code>pairs</code> to iterate over all the key/value pairs in a table, unlike <code>ipairs</code> the keys do not have to be integral values, and can be anything.</p>
+<pre><code>-- Iterate over a table named 'tab'
+tab = { x = 3, y = "string", z = 1 }
+
+for key,value in pairs(tab) do
+    print( "tab."..key.." = "..value )
+end
+
+-- Prints:
+--  tab.y = string
+--  tab.x = 3
+--  tab.z = 1
+</code></pre>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#ipairs'>ipairs( table )</a></li>
+                              
+  
+                      <li><a href='#pairs'>pairs( table )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-overview'></div><a name='conditionals'>Conditionals Overview</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+                    
+                    <div class='description'>
+                      <p>Use <strong>conditionals</strong> to test for a particular circumstance and then branch your code appropriately. See the examples below.</p>
+<pre><code>-- Check if x is equal to 10
+if x == 10 then
+    print( "x equals 10" )
+end
+
+-- else and elseif
+if x == 10 then
+    print( "x is 10" )
+elseif x == 5 then
+    print( "x is 5" )
+else    
+    print( "x is something else: "..x )
+end
+
+-- Checking multiple values
+if x == 10 and y &lt; 5 then
+    print( "x is 10 and y is less than 5" )
+elseif x == 5 or y == 3 then
+    print( "x is 5 or y is 3" )
+else
+    print( "x is "..x.." and y is "..y )
+end
+</code></pre>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+              <div class='section'>
+              <h2><a name='2'>Language</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='ipairs'>ipairs( table )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>for i,v in ipairs( t ) do body end
+
+-- This will iterate over the pairs:
+--   (1,t[1]), (2,t[2]), ...    
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p><code>ipairs</code> can be used to iterate over a table sequentially, starting from the index 1 and continuing until the first integer key absent from the tableReturns three values: an iterator function, the table, and 0.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">table</td>
+                        <td class="parameter-desc"><p>table to iterate over</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Returns three values: an iterator function, the table, and 0'</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#forloops'>For Loops Overview</a></li>
+                              
+  
+                      <li><a href='#pairs'>pairs( table )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='pairs'>pairs( table )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>for k,v in pairs( t ) do body end
+
+-- This will iterate over all key-value
+-- pairs in table t
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p><code>pairs</code> can be used to iterate over a tables key-value pairs. Returns three values: the next function, the table t, and nil.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">table</td>
+                        <td class="parameter-desc"><p>table to iterate over</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Returns three values: the next function, the table t, and nil</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#forloops'>For Loops Overview</a></li>
+                              
+  
+                      <li><a href='#ipairs'>ipairs( table )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+              <div class='section'>
+              <h2><a name='3'>Tables</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='table.concat'>table.concat( table, sep )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>table.concat( table )
+table.concat( table, sep )
+table.concat( table, sep, i )
+table.concat( table, sep, i, j )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Given an array where all elements are strings or numbers, returns <code>table[i]..sep..table[i+1] ... sep..table[j]</code>. The default value for <code>sep</code> is the empty string, the default for <code>i</code> is 1, and the default for <code>j</code> is the length of the table. If <code>i</code> is greater than <code>j</code>, returns the empty string.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">table</td>
+                        <td class="parameter-desc"><p>table to concatenate</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">sep</td>
+                        <td class="parameter-desc"><p>separator string</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">i</td>
+                        <td class="parameter-desc"><p>int, starting index to concatenate from</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">j</td>
+                        <td class="parameter-desc"><p>int, ending index</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A string of the elements in <code>table</code> concatenated with each other, separated by <code>sep</code></p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='table.insert'>table.insert( table, pos, value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>table.insert( table, value )
+table.insert( table, pos, value )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Inserts element <code>value</code> at position <code>pos</code> in <code>table</code>, shifting up other elements to open space, if necessary. The default value for <code>pos</code> is n+1, where n is the length of the table, so that a call <code>table.insert(t,x)</code> inserts x at the end of table t.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">table</td>
+                        <td class="parameter-desc"><p>table to insert into</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">pos</td>
+                        <td class="parameter-desc"><p>int, position to inset</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>value to insert</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#table.remove'>table.remove( table, pos )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='table.maxn'>table.maxn( table )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>table.maxn( table )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Returns the largest positive numerical index of the given table, or zero if the table has no positive numerical indices. (To do its job this function does a linear traversal of the whole table.)</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">table</td>
+                        <td class="parameter-desc"><p>table to query</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Largest positive numerical index of the given table</p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='table.remove'>table.remove( table, pos )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>table.remove( table )
+table.remove( table, pos )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Removes from <code>table</code> the element at position <code>pos</code>, shifting down other elements to close the space, if necessary. Returns the value of the removed element. The default value for <code>pos</code> is n, where n is the length of the table, so that a call <code>table.remove(t)</code> removes the last element of table t.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">table</td>
+                        <td class="parameter-desc"><p>table to insert into</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">pos</td>
+                        <td class="parameter-desc"><p>int, position of value to remove</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Value of the removed element</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#table.insert'>table.insert( table, pos, value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='table.sort'>table.sort( table )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>table.sort( table )
+table.sort( table, comp )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Sorts table elements in a given order, in-place, from <code>table[1]</code> to <code>table[n]</code>, where n is the length of the table. If <code>comp</code> is given, then it must be a function that receives two table elements and returns true when the first is less than the second (so that <code>not comp(a[i+1],a[i]</code>) will be true after the sort). If <code>comp</code> is not given, then the standard Lua operator &lt; is used instead.</p>
+<p>The sort algorithm is not stable; that is, elements considered equal by the given order may have their relative positions changed by the sort.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">table</td>
+                        <td class="parameter-desc"><p>the table to sort</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">comp</td>
+                        <td class="parameter-desc"><p>a function that receives two table elements and returns true when the first is less than the second</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+              <div class='section'>
+              <h2><a name='4'>Strings</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='string.find'>string.find( s, pattern )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>string.find( s, pattern )
+string.find( s, pattern, init )
+string.find( s, pattern, init, plain )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Looks for the first match of <code>pattern</code> in the string <code>s</code>. If it finds a match, then <code>string.find()</code> returns the indices of <code>s</code> where the occurrence starts and ends; otherwise, it returns <code>nil</code>. A third, optional numerical argument <code>init</code> specifies where to start the search, its default value is 1 and can be negative. A value of <code>true</code> as the fourth optional argument <code>plain</code> turns off the pattern matching facilities so the function performs a plain "find substring" operation, with no characters in <code>pattern</code> being considered "magic." Note that if <code>plain</code> is given, then <code>init</code> must be given as well.</p>
+<p>If the pattern has captures, then in a successful match the captured values are also returned, after the two indices.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">s</td>
+                        <td class="parameter-desc"><p>string to search in</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">pattern</td>
+                        <td class="parameter-desc"><p>pattern to look for</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">init</td>
+                        <td class="parameter-desc"><p>starting character in string to search from, default is 1</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">plain</td>
+                        <td class="parameter-desc"><p>boolean, perform a plain substring search</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The start and end indices of the match, or <code>nil</code> if no match. If the pattern has captures then captured values are also returned after the indices</p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='string.format'>string.format( formatstring, ... )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>string.format( formatstring, ... )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Returns a formatted version of its variable arguments following the description given in the first argument, which must be a string. The format string follows the same rules as the <code>printf</code> family of standard C functions. The only difference are that the options/modifiers <code>*, 1, L, n, p</code> and <code>h</code> are not supported and that there is an extra option <code>q</code>. The <code>q</code> option formats a string in a form suitable to be safely read back by the Lua interpreter, for example all double quotes, newlines, embedded zeros and backslashes will be escaped when written.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">formatstring</td>
+                        <td class="parameter-desc"><p>string defining the format</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='examples'>
+                      <h4>Examples</h4>                    
+                      
+  
+                      <div id='example-0'>
+s = string.format("Number is %d", 5)
+print( s )
+-- prints "Number is 5"
+
+                      </div>
+                          
+                  
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A formatted string</p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='string.len'>string.len( s )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>string.len( s )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Receives a string and returns its length. The empty string "" has length 0.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">s</td>
+                        <td class="parameter-desc"><p>get the length of this string</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Length of string <code>s</code></p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='string.lower'>string.lower( s )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>string.lower( s )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Receives a string and returns a copy of this string with all uppercase letters changed to lowercase. All other characters are left unchanged.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">s</td>
+                        <td class="parameter-desc"><p>get a lowercase version of this string</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Lowercase version of string <code>s</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#string.upper'>string.upper( s )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='string.upper'>string.upper( s )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>string.upper( s )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Receives a string and returns a copy of this string with all lowercase letters changed to uppercase. All other characters are left unchanged.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">s</td>
+                        <td class="parameter-desc"><p>get an uppercase version of this string</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Uppercase version of string <code>s</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#string.lower'>string.lower( s )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='string.match'>string.match( s, pattern )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>string.match( s, pattern )
+string.match( s, pattern, init )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Looks for the first match of <code>pattern</code> in the string <code>s</code>. If it finds one then <code>string.match()</code> returns the captures from the pattern, otherwise it returns <code>nil</code>. If <code>pattern</code> specifies no captures, then the whole match is returned. A third optional numerical argument <code>init</code> specifies where to start the search. Its default is 1 and can be negative.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">s</td>
+                        <td class="parameter-desc"><p>string to search</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">pattern</td>
+                        <td class="parameter-desc"><p>pattern to match</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">init</td>
+                        <td class="parameter-desc"><p>starting location in string</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Captures from the first match of <code>pattern</code> in string <code>s</code>, or <code>nil</code> if none were found</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#string.find'>string.find( s, pattern )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='string.rep'>string.rep( s, n )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>string.rep( s, n )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Returns a string that is the concatenation of <code>n</code> copies of the string <code>s</code>.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">s</td>
+                        <td class="parameter-desc"><p>string to replicate</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">n</td>
+                        <td class="parameter-desc"><p>int, number of times to replicate the string</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p><code>n</code> concatenations of string <code>s</code></p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='string.sub'>string.sub( s, i, j )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>string.sub( s, i )
+string.sub( s, i, j )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Returns the substring of <code>s</code> that starts at <code>i</code> and continues until <code>j</code>; <code>i</code> and <code>j</code> can be negative. If <code>j</code> is absent, then it is assumed to be equal to -1 (which is the same as the string length). In particular, the call <code>string.sub(s,1,j)</code> returns a prefix of <code>s</code> with length <code>j</code>, and string.sub(s, -i) returns a suffix of <code>s</code> with length <code>i</code>.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">s</td>
+                        <td class="parameter-desc"><p>find substring of this string</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">i</td>
+                        <td class="parameter-desc"><p>int, starting index</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">j</td>
+                        <td class="parameter-desc"><p>int, ending index</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Substring of string <code>s</code></p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+              <div class='section'>
+              <h2><a name='5'>Math</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.abs'>math.abs( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.abs( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the absolute value of <code>value</code>. For example, <code>math.abs(-5)</code> returns 5.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, the number to get the absolute value of</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The absolute value of value</p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.acos'>math.acos( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.acos( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the arc cosine of <code>value</code> in radians</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the arc cosine of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The arc cosine of value in radians</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.asin'>math.asin( value )</a></li>
+                              
+  
+                      <li><a href='#math.atan'>math.atan( value )</a></li>
+                              
+  
+                      <li><a href='#math.atan2'>math.atan2( y, x )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.asin'>math.asin( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.asin( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the arc sine of <code>value</code> in radians</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the arc sine of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The arc sine of value in radians</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.acos'>math.acos( value )</a></li>
+                              
+  
+                      <li><a href='#math.atan'>math.atan( value )</a></li>
+                              
+  
+                      <li><a href='#math.atan2'>math.atan2( y, x )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.atan'>math.atan( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.atan( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the arc tangent of <code>value</code> in radians</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the arc tangent of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The arc tangent of value in radians</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.asin'>math.asin( value )</a></li>
+                              
+  
+                      <li><a href='#math.acos'>math.acos( value )</a></li>
+                              
+  
+                      <li><a href='#math.atan2'>math.atan2( y, x )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.atan2'>math.atan2( y, x )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.atan2( y, x )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the arc tangent of y/x in radians, but uses the sign of both parameters to find the quadrant of the result. It also handles correctly the case of x being zero.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">x</td>
+                        <td class="parameter-desc"><p>int or float, denominator for arc tangent</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">y</td>
+                        <td class="parameter-desc"><p>int or float, numerator for arc tangent</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The arc tangent of y/x in radians</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.asin'>math.asin( value )</a></li>
+                              
+  
+                      <li><a href='#math.acos'>math.acos( value )</a></li>
+                              
+  
+                      <li><a href='#math.atan'>math.atan( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.ceil'>math.ceil( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.ceil( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the smallest integer larger than or equal to <code>value</code>. This rounds a number up to the nearest integer. For example, <code>math.ceil(5.2)</code> returns 6.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the smallest integer larger than or equal to this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The smallest integer larger than or equal to value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.floor'>math.floor( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.cos'>math.cos( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.cos( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the cosine of <code>value</code> (assumed to be in radians).</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the cosine of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Cosine of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.sin'>math.sin( value )</a></li>
+                              
+  
+                      <li><a href='#math.tan'>math.tan( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.cosh'>math.cosh( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.cosh( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns hyperbolic cosine of <code>value</code>.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the hyperbolic cosine of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Hyperbolic cosine of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.sinh'>math.sinh( value )</a></li>
+                              
+  
+                      <li><a href='#math.tanh'>math.tanh( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.deg'>math.deg( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.deg( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the angle specified by <code>value</code> (given in radians) in degrees.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, angle in radians to convert to degrees</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Angle specified by value (in radians) in degrees</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.rad'>math.rad( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.rad'>math.rad( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.rad( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the angle specified by <code>value</code> (given in degrees) in radians.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, angle in degrees to convert to radians</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Angle specified by value (in degrees) in radians</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.deg'>math.deg( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.exp'>math.exp( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.exp( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns <strong>e</strong> raised to <code>value</code></p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, exponent of e</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>e raised to the power of value</p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.floor'>math.floor( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.floor( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the largest integer smaller than or equal to <code>value</code>. This rounds a number down to the nearest integer. For example, <code>math.floorTh(5.7)</code> returns 5.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the largest integer smaller than or equal to this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The largest integer smaller than or equal to value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.ceil'>math.ceil( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.fmod'>math.fmod( x, y )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.fmod( x, y )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the remainder of the division of <code>x</code> by <code>y</code> that rounds the quotient towards zero.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">x</td>
+                        <td class="parameter-desc"><p>int or float</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">y</td>
+                        <td class="parameter-desc"><p>int or float</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The remainder of the division of x by y</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.modf'>math.modf( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.frexp'>math.frexp( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.frexp( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns m and e such that <code>value</code> = m2^e, e is an integer and the absolute value of m is in the range [0.5, 1) (or zero when x is zero).</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>m and e such that value = m2^e, e is an integer and the absolute value of m is in the range [0.5, 1) (or zero when x is zero).</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.ldexp'>math.ldexp( m, e )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.ldexp'>math.ldexp( m, e )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.ldexp( m, e )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns m2^e (e should be an integer)</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">m</td>
+                        <td class="parameter-desc"><p>int or float</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">e</td>
+                        <td class="parameter-desc"><p>int</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>m2^e</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.frexp'>math.frexp( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.log'>math.log( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.log( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the natural logarithm of <code>value</code></p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the natural logarithm of this value</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The natural logarithm of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.log10'>math.log10( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.log10'>math.log10( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.log10( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the base-10 logarithm of <code>value</code></p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the base-10 logarithm of this value</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The base-10 logarithm of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.log'>math.log( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.max'>math.max( value, ... )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.max( value, ... )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns maximum value among its arguments.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>any comparable value</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The maximum value among its arguments</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.min'>math.min( value, ... )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.min'>math.min( value, ... )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.min( value, ... )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns minimum value among its arguments.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>any comparable value</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>The minimum value among its arguments</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.max'>math.max( value, ... )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.modf'>math.modf( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.modf( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns two numbers, the integral part of <code>value</code> and the fractional part of <code>value</code>.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Two numbers, the integral part of value and the fractional part of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.fmod'>math.fmod( x, y )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.pow'>math.pow( x, y )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.pow( x, y )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns <code>x</code> raised to <code>y</code>. Equivalent to the expression x^y.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">x</td>
+                        <td class="parameter-desc"><p>int or float</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">y</td>
+                        <td class="parameter-desc"><p>int or float</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>x raised to y</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.sqrt'>math.sqrt( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.random'>math.random()</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.random()
+math.random( maximum )
+math.random( minimum, maximum )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>When called without arguments, <code>math.random()</code> returns a uniform pseudo-random real number in the range [0, 1). When called with an integer number <code>maximum</code>, <code>math.random()</code> returns a uniform pseudo-random integer in the range [1, maximum]. When called with two integer numbers, <code>minimum</code> and <code>maximum</code>, <code>math.random()</code> returns a uniform pseudo-random integer in the range [minimum, maximum].</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">minimum</td>
+                        <td class="parameter-desc"><p>int, minimum value of returned pseudo-random number</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">maximum</td>
+                        <td class="parameter-desc"><p>int, maximum value of returned pseudo-random number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A uniform pseudo-random real number or integer (depending on parameters)</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.randomseed'>math.randomseed( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.randomseed'>math.randomseed( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.randomseed( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Sets value as the "seed" for the pseudo-random number generator. Equal seeds produce equal sequences of numbers.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int, seed of the pseudo-random number generator</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A uniform pseudo-random real number or integer (depending on parameters)</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.random'>math.random()</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.sin'>math.sin( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.sin( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the sine of <code>value</code> (assumed to be in radians).</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the sine of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Sine of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.cos'>math.cos( value )</a></li>
+                              
+  
+                      <li><a href='#math.tan'>math.tan( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.sinh'>math.sinh( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.sinh( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns hyperbolic sine of <code>value</code>.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the hyperbolic sine of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Hyperbolic sine of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.cosh'>math.cosh( value )</a></li>
+                              
+  
+                      <li><a href='#math.tanh'>math.tanh( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.tan'>math.tan( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.tan( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns the tangent of <code>value</code> (assumed to be in radians).</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the tangent of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Tangent of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.sin'>math.sin( value )</a></li>
+                              
+  
+                      <li><a href='#math.cos'>math.cos( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.tanh'>math.tanh( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.tanh( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function returns hyperbolic tangent of <code>value</code>.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the hyperbolic tangent of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Hyperbolic tangent of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.sinh'>math.sinh( value )</a></li>
+                              
+  
+                      <li><a href='#math.cosh'>math.cosh( value )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='math.sqrt'>math.sqrt( value )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.sqrt( value )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This function computes the square root of <code>value</code>. You can also use the expression <code>value^0.5</code> to compute this value.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">value</td>
+                        <td class="parameter-desc"><p>int or float, compute the square root of this number</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Square root of value</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#math.pow'>math.pow( x, y )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-const'></div><a name='math.huge'>math.huge</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.huge</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>A value larger than or equal to any other numerical value.</p>
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A value larger than or equal to any other numerical value</p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-const'></div><a name='math.pi'>math.pi</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>math.pi</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>The value of <strong>pi</strong>.</p>
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Value of pi</p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+              <div class='section'>
+              <h2><a name='6'>Date and Time</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='os.clock'>os.clock()</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>os.clock()</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Returns an approximation of the amount in seconds of CPU time used by the program.</p>
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Approximation of the amount in seconds of CPU time used by the program.</p></p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='os.difftime'>os.difftime( t2, t1 )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>os.difftime( t2, t1 )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Returns the number of seconds from time <code>t1</code> to time <code>t2</code>. In POSIX, Windows, and some other systems, this value is exactly <code>t2-t1</code>.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">t2</td>
+                        <td class="parameter-desc"><p>Ending time</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">t1</td>
+                        <td class="parameter-desc"><p>Starting time</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Number of seconds from time <code>t1</code> to time <code>t2</code>.</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#os.time'>os.time()</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='os.date'>os.date( format )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>os.date()
+os.date( format )
+os.date( format, time )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Returns a string or a table containing the date and time, formatted according to the given string <code>format</code>.</p>
+<p>If the <code>time</code> argument is present, this is the time to be formatted (see the <code>os.time</code> function for a description of this value). Otherwise, <code>date</code> formats the current time.</p>
+<p>If format starts with '!', then the date is formatted in Coordinated Universal Time. After this optional character, if format is the string '*t', then date returns a table with the following fields: year (four digits), month (1--12), day (1--31), hour (0--23), min (0--59), sec (0--61), wday (weekday, Sunday is 1), yday (day of the year), and isdst (daylight saving flag, a boolean).</p>
+<p>If <code>format</code> is not '*t', then <code>date</code> returns the date as a string, formatted according to the same rules as the C function <code>strftime</code>.</p>
+<p>When called without arguments, date returns a reasonable date and time representation that depends on the host system and on the current locale (that is, <code>os.date()</code> is equivalent to <code>os.date('%c')</code>).</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">format</td>
+                        <td class="parameter-desc"><p>String used to format the returned date</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">time</td>
+                        <td class="parameter-desc"><p>If the time argument is present, this is the time to be formatted (see the os.time function for a description of this value).</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A string or a table containing the date and time.</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#os.time'>os.time()</a></li>
+                              
+  
+                      <li><a href='#os.setlocale'>os.setlocale( locale )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='os.setlocale'>os.setlocale( locale )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>os.setlocale( locale )
+os.setlocale( locale, category )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Sets the current locale of the program. <code>locale</code> is a string specifying a locale; <code>category</code> is an optional string describing which category to change: "all", "collate", "ctype", "monetary", "numeric", or "time"; the default category is "all". The function returns the name of the new locale, or nil if the request cannot be honored.</p>
+<p>If <code>locale</code> is the empty string, the current locale is set to an implementation-defined native locale. If <code>locale</code> is the string "C", the current locale is set to the standard C locale.</p>
+<p>When called with <code>nil</code> as the first argument, this function only returns the name of the current locale for the given category.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">locale</td>
+                        <td class="parameter-desc"><p>String specifying a locale, can be nil or the empty string.</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">category</td>
+                        <td class="parameter-desc"><p>String specifying a category to set, can be "all", "collate", "ctype", "monetary", "numeric", or "time"</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>When called with <code>nil</code> for the first argument, returns the name of the current locale for the given category.</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#os.date'>os.date( format )</a></li>
+                              
+  
+                      <li><a href='#os.time'>os.time()</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='os.time'>os.time()</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>os.time()
+os.time( table )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Returns the current time when called without arguments, or a time representing the date and time specified by the given table. This table must have fields <code>year</code>, <code>month</code>, and <code>day</code>, and may have fields <code>hour</code>, <code>min</code>, <code>sec</code>, and <code>isdst</code> (for a description of these fields, see the os.date function).</p>
+<p>The returned value is a number, whose meaning depends on your system. In POSIX, Windows, and some other systems, this number counts the number of seconds since some given start time (the "epoch"). In other systems, the meaning is not specified, and the number returned by <code>time</code> can be used only as an argument to <code>date</code> and <code>difftime</code>.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">table</td>
+                        <td class="parameter-desc"><p>This table must have fields <code>year</code>, <code>month</code>, and <code>day</code>, and may have fields <code>hour</code>, <code>min</code>, <code>sec</code>, and <code>isdst</code></p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A number, whose meaning depends on your system. In POSIX, Windows, and some other systems, this number counts the number of seconds since some given start time (the "epoch"). In other systems, the meaning is not specified, and the number returned by <code>time</code> can be used only as an argument to <code>date</code> and <code>difftime</code>.</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#os.date'>os.date( format )</a></li>
+                              
+  
+                      <li><a href='#os.setlocale'>os.setlocale( locale )</a></li>
+                              
+  
+                      <li><a href='#os.difftime'>os.difftime( t2, t1 )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+            </div>
+            <script src="lib/ace.js" type="text/javascript" charset="utf-8"></script>    
+            <script>            
+                var editors = [];
+          
+            
+                editors[0] = new ace.edit("example-0");
+                editors[0].setReadOnly(true);
+                editors[0].setHighlightActiveLine(false);
+                editors[0].setShowInvisibles(false);                
+                editors[0].setTheme("ace/theme/github");
+                editors[0].getSession().setMode("ace/mode/lua");
+                editors[0].resize()
+              
+           
+                $(document).ready(function()
+                {
+                    for( var i = 0; i < editors.length; i++ )
+                    {
+                        var e = editors[i];
+                        var height = e.getSession().getScreenLength() * e.renderer.lineHeight + e.renderer.scrollBar.getWidth();
+                        
+                        $('#example-'+i.toString()).height(height.toString()+'px');
+                        
+                        e.resize();
+                    }    
+                });
+            </script>
+            </body>
+          </html>
+          

@@ -1,0 +1,1176 @@
+
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <link rel="stylesheet" type="text/css" href="css/style.css">     
+              <script src="lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>                        
+              <title>Vector &mdash; LuaCanvas</title>
+            </head>
+            <body>
+              <a name="top"></a>
+              <div class="documentation">
+          
+        
+              <div class='header'>
+                <img id='luacanvas' src='images/LuaCanvas-Logo.png' height='200px'/>
+                <div id='chapter'>
+                    <div id='chapter-title'>
+                    <h1>Vector</h1>
+                    </div>
+                </div>
+              <h3 class="subtitle"><a href="index.html">Reference</a> ❯ Vector and Transformation Types</h3>
+              </div>
+          
+
+              <div class='outline'>
+              <ul class="sec-ref">    
+          
+
+                <li><a href='#1'>2D Vector</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-type"><a href='#vec2'>vec2</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.dot'>vec2.dot( v )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.normalize'>vec2.normalize()</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.dist'>vec2.dist( v )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.distSqr'>vec2.distSqr( v )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.len'>vec2.len()</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.lenSqr'>vec2.lenSqr()</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.cross'>vec2.cross( v )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.rotate'>vec2.rotate( angle )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.rotate90'>vec2.rotate90()</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#vec2.angleBetween'>vec2.angleBetween( v )</a></li>
+                  
+ 
+                </ul>             
+              
+
+                <li><a href='#2'>Transformation</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-type"><a href='#transformation'>transformation</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#transformation.rotate'>transformation.rotate( m, r, x, y, z )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#transformation.translate'>transformation.translate( m, x, y, z )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#transformation.scale'>transformation.scale( m, x, y, z )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-method"><a href='#transformation.inverse'>transformation.inverse( m )</a></li>
+                  
+ 
+                </ul>             
+              
+
+              </ul>        
+              </div>
+          
+
+              <div class='section'>
+              <h2><a name='1'>2D Vector</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-type'></div><a name='vec2'>vec2</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>vec2.x
+vec2.y
+
+myVec = vec2( 2.5, 10.0 )
+
+-- Supports operators:
+--   v = vec2 + vec2
+--   v = vec2 - vec2
+--   v = vec2 * scalar
+--   v = vec2 / scalar
+--   v = -vec2
+--   b = vec2 == vec2
+--   print( vec2 )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This type represents a 2D vector. Most mathematical operators such as equality, addition, subtraction, multiplication and division are provided, so you can use <code>vec2</code> data types similarly to how you use numerical types. In addition there are a number of methods, such as <code>v:dot( vec2 )</code> that can be called on vec2 types, please see the related items below.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">x</td>
+                        <td class="parameter-desc"><p>float, the x component of this vec2</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">y</td>
+                        <td class="parameter-desc"><p>float, the y component of this vec2</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='examples'>
+                      <h4>Examples</h4>                    
+                      
+  
+                      <div id='example-0'>
+--Some vector operations
+v1 = vec2( 1, 1 )
+v2 = vec2( 4, 2 )
+
+--Angle between
+v1:angleBetween( v2 )
+
+--Adding
+v3 = v1 + v2
+
+--Multiplying
+v4 = v1 * 5.0
+
+--Rotating by 45 degrees
+v5 = v1:rotate(math.rad(45))
+
+                      </div>
+                          
+                  
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2.dot'>vec2.dot( v )</a></li>
+                              
+  
+                      <li><a href='#vec2.normalize'>vec2.normalize()</a></li>
+                              
+  
+                      <li><a href='#vec2.dist'>vec2.dist( v )</a></li>
+                              
+  
+                      <li><a href='#vec2.distSqr'>vec2.distSqr( v )</a></li>
+                              
+  
+                      <li><a href='#vec2.len'>vec2.len()</a></li>
+                              
+  
+                      <li><a href='#vec2.lenSqr'>vec2.lenSqr()</a></li>
+                              
+  
+                      <li><a href='#vec2.cross'>vec2.cross( v )</a></li>
+                              
+  
+                      <li><a href='#vec2.rotate'>vec2.rotate( angle )</a></li>
+                              
+  
+                      <li><a href='#vec2.rotate90'>vec2.rotate90()</a></li>
+                              
+  
+                      <li><a href='#vec2.angleBetween'>vec2.angleBetween( v )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.dot'>vec2.dot( v )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 1, 1 )
+x = v1:dot( v )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the scalar dot product between two <code>vec2</code> types</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">v</td>
+                        <td class="parameter-desc"><p>compute the dot product with this vec2 and v</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Dot product between this <code>vec2</code> and <code>v</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.normalize'>vec2.normalize()</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 5, 5 )
+v1 = v1:normalize()
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns a normalized version of the vector</p>
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Normalized version of this <code>vec2</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.dist'>vec2.dist( v )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 1, 1 )
+x = v1:dist( vec2(2, 2) )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the distance between two <code>vec2</code> types</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">v</td>
+                        <td class="parameter-desc"><p>compute the distance between this vec2 and v</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Distance between this <code>vec2</code> and <code>v</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.distSqr'>vec2.distSqr( v )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 1, 1 )
+x = v1:distSqr( vec2(2, 2) )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the squared distance between two <code>vec2</code> types</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">v</td>
+                        <td class="parameter-desc"><p>compute the squared distance between this vec2 and v</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Squared distance between this <code>vec2</code> and <code>v</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.len'>vec2.len()</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 2, 1 )
+x = v1:len()
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the length of a <code>vec2</code></p>
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Length of this <code>vec2</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.lenSqr'>vec2.lenSqr()</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 2, 1 )
+x = v1:lenSqr()
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the squared length of a <code>vec2</code></p>
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Squared length of this <code>vec2</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.cross'>vec2.cross( v )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 1, 1 )
+v2 = v1:cross( vec2(2, 2) )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the cross product between two <code>vec2</code> types</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">v</td>
+                        <td class="parameter-desc"><p>compute the cross product of this vec2 and v</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Cross product of this <code>vec2</code> and <code>v</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.rotate'>vec2.rotate( angle )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 1, 1 )
+v1 = v1:rotate( math.rad(45) )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns a rotated copy of a <code>vec2</code> type. The <code>angle</code> is assumed to be radians.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">angle</td>
+                        <td class="parameter-desc"><p>float, rotate this vector by <code>angle</code> in radians</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Rotated version of this <code>vec2</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.rotate90'>vec2.rotate90()</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 1, 1 )
+v1 = v1:rotate90()
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns a copy of a <code>vec2</code> type, rotated 90 degrees.</p>
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Rotated version of this <code>vec2</code></p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='vec2.angleBetween'>vec2.angleBetween( v )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>v1 = vec2( 1, 1 )
+angle = math.deg( v1:angleBetween( vec2(5, 2) ) )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the angle between this <code>vec2</code> and <code>v</code> in radians.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">v</td>
+                        <td class="parameter-desc"><p>compute the angle between this <code>vec2</code> and <code>v</code></p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>Angle between <code>vec2</code> and <code>v</code> in radians</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#vec2'>vec2</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+              <div class='section'>
+              <h2><a name='2'>Transformation</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-type'></div><a name='transformation'>transformation</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>transformation[1] ... transformation[16]
+m = transformation()
+m = transformation(1, 2, 3, ... 16)
+m = transformation1 * transformation2
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This type represents transformations in LuaCanvas, and can be used with functions such as <code>modelTransformation()</code>. The transformation type supports the following arithmetic operators: multiplication (between two matrices), multiplication by scalar, division by scalar, equality, and element-wise addition and subtraction.</p>
+<p>Because this type is used to represent transformations it also provides a number of 3D transformation methods such as <code>transformation:translate(x,y,z)</code>, <code>transformation:rotate(angle,x,y,z)</code>. See the related items for a full list.</p>
+<p>Constructing a transformation with no parameters returns the identity transformation. Passing 6 numbers when constructing a transformation will assign those values to the elements of the transformation. Individual transformation elements can be accessed by their index, for example <code>m[1]</code> for the first element and <code>m[6]</code> for the last element. Entries are defined such that the x,y,z translation components are stored in elements 13, 14, and 15 respectively.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">element</td>
+                        <td class="parameter-desc"><p>float, an element of the transformation</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='examples'>
+                      <h4>Examples</h4>                    
+                      
+  
+                      <div id='example-1'>
+transformation[x] = y
+m1 = transformation( 1,2,3, ... ,6 )
+m2 = transformation( 4,5,6, ... ,9 )
+
+-- Supports operators:
+m = m1 * m2        
+m = m1 + m2
+m = m1 - m2
+m = m1 * 10
+m = m1 / 10
+m = -m1
+
+checkEqual = m1 == m2
+
+print( m1 )
+
+                      </div>
+                          
+                  
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A new transformation with the given elements</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#transformation.rotate'>transformation.rotate( m, r, x, y, z )</a></li>
+                              
+  
+                      <li><a href='#transformation.translate'>transformation.translate( m, x, y, z )</a></li>
+                              
+  
+                      <li><a href='#transformation.scale'>transformation.scale( m, x, y, z )</a></li>
+                              
+  
+                      <li><a href='#transformation.inverse'>transformation.inverse( m )</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='transformation.rotate'>transformation.rotate( m, r, x, y, z )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>rotated = m:rotate( angle, axisX, axisY, axisZ )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the transformation multiplied by a rotation transformation defining a rotation of angle degrees around the x,y,z axis or (0,0,1) if no axis is given.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">angle</td>
+                        <td class="parameter-desc"><p>float, the rotation in degrees</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">axisX</td>
+                        <td class="parameter-desc"><p>float, the x component of the axis of rotation</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">axisY</td>
+                        <td class="parameter-desc"><p>float, the y component of the axis of rotation</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">axisZ</td>
+                        <td class="parameter-desc"><p>float, the z component of the axis of rotation</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='examples'>
+                      <h4>Examples</h4>                    
+                      
+  
+                      <div id='example-2'>
+m = transformation()
+
+--Rotate about 0,0,1
+rotated = m:rotate(30)
+
+--Rotate by a given axis
+rotated= m:rotate(30, 1, 0, 0)
+
+                      </div>
+                          
+                  
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A transformation which rotates m by the specified rotation</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#transformation'>transformation</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='transformation.translate'>transformation.translate( m, x, y, z )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>translated = m:translate( x, y, z )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the transformation multiplied by a translation transformation defining a translation of x, y, z.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">x</td>
+                        <td class="parameter-desc"><p>float, the x component of translation</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">y</td>
+                        <td class="parameter-desc"><p>float, the y component of translation</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">z</td>
+                        <td class="parameter-desc"><p>float, optional (defaults to 0) the z component of translation"</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='examples'>
+                      <h4>Examples</h4>                    
+                      
+  
+                      <div id='example-3'>
+m = transformation()
+translated = m:translate(100,20,10)
+
+                      </div>
+                          
+                  
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A transformation which translates m by the specified amount</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#transformation'>transformation</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='transformation.scale'>transformation.scale( m, x, y, z )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>scaled = m:scale( x, y, z )</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the transformation scaled by a translation transformation defining a scaling to each axis.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">x</td>
+                        <td class="parameter-desc"><p>float, the x component of scale, or the uniform scale if no other components are given</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">y</td>
+                        <td class="parameter-desc"><p>float, optional, the y component of scale</p></td>                
+                      </tr>
+                          
+  
+                      <tr>
+                        <td class="parameter-name">z</td>
+                        <td class="parameter-desc"><p>float, optional, defaults to 1 if x and y are both given, otherwise   x – the z component of scale</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='examples'>
+                      <h4>Examples</h4>                    
+                      
+  
+                      <div id='example-4'>
+m = transformation()
+s = m:scale(100,20,10)
+
+--Uniform scaling
+s = m:scale(5)
+
+                      </div>
+                          
+                  
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A transformation which scales m by the specified amount</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#transformation'>transformation</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-method'></div><a name='transformation.inverse'>transformation.inverse( m )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>inv = m:inverse()</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This method returns the inverse of the given transformation, if such an inverse exists. If no inverse exists, the result is a transformation of NaN values. The inverse of a transformation is a transformation such that m * mInv = I, where I is the identity transformation.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">m</td>
+                        <td class="parameter-desc"><p>the transformation to invert</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='returns'>
+                      <h4>Returns</h4>
+                      <p><p>A transformation which inverts m</p></p>
+                    </div>
+                      
+                  
+                    <div class='related'>
+                      <h4>Related</h4>                    
+                      <ul>
+                      
+  
+                      <li><a href='#transformation'>transformation</a></li>
+                              
+ 
+                      </ul>                 
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+            </div>
+            <script src="lib/ace.js" type="text/javascript" charset="utf-8"></script>    
+            <script>            
+                var editors = [];
+          
+            
+                editors[0] = new ace.edit("example-0");
+                editors[0].setReadOnly(true);
+                editors[0].setHighlightActiveLine(false);
+                editors[0].setShowInvisibles(false);                
+                editors[0].setTheme("ace/theme/github");
+                editors[0].getSession().setMode("ace/mode/lua");
+                editors[0].resize()
+              
+            
+                editors[1] = new ace.edit("example-1");
+                editors[1].setReadOnly(true);
+                editors[1].setHighlightActiveLine(false);
+                editors[1].setShowInvisibles(false);                
+                editors[1].setTheme("ace/theme/github");
+                editors[1].getSession().setMode("ace/mode/lua");
+                editors[1].resize()
+              
+            
+                editors[2] = new ace.edit("example-2");
+                editors[2].setReadOnly(true);
+                editors[2].setHighlightActiveLine(false);
+                editors[2].setShowInvisibles(false);                
+                editors[2].setTheme("ace/theme/github");
+                editors[2].getSession().setMode("ace/mode/lua");
+                editors[2].resize()
+              
+            
+                editors[3] = new ace.edit("example-3");
+                editors[3].setReadOnly(true);
+                editors[3].setHighlightActiveLine(false);
+                editors[3].setShowInvisibles(false);                
+                editors[3].setTheme("ace/theme/github");
+                editors[3].getSession().setMode("ace/mode/lua");
+                editors[3].resize()
+              
+            
+                editors[4] = new ace.edit("example-4");
+                editors[4].setReadOnly(true);
+                editors[4].setHighlightActiveLine(false);
+                editors[4].setShowInvisibles(false);                
+                editors[4].setTheme("ace/theme/github");
+                editors[4].getSession().setMode("ace/mode/lua");
+                editors[4].resize()
+              
+           
+                $(document).ready(function()
+                {
+                    for( var i = 0; i < editors.length; i++ )
+                    {
+                        var e = editors[i];
+                        var height = e.getSession().getScreenLength() * e.renderer.lineHeight + e.renderer.scrollBar.getWidth();
+                        
+                        $('#example-'+i.toString()).height(height.toString()+'px');
+                        
+                        e.resize();
+                    }    
+                });
+            </script>
+            </body>
+          </html>
+          

@@ -1,0 +1,235 @@
+
+          <html>
+            <head>
+              <meta charset="utf-8">
+              <link rel="stylesheet" type="text/css" href="css/style.css">     
+              <script src="lib/jquery-1.10.1.min.js" type="text/javascript" charset="utf-8"></script>                        
+              <title>Console &mdash; LuaCanvas</title>
+            </head>
+            <body>
+              <a name="top"></a>
+              <div class="documentation">
+          
+        
+              <div class='header'>
+                <img id='luacanvas' src='images/LuaCanvas-Logo.png' height='200px'/>
+                <div id='chapter'>
+                    <div id='chapter-title'>
+                    <h1>Console</h1>
+                    </div>
+                </div>
+              <h3 class="subtitle"><a href="index.html">Reference</a> ❯ Running scripts</h3>
+              </div>
+          
+
+              <div class='outline'>
+              <ul class="sec-ref">    
+          
+
+                <li><a href='#1'>Overview</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-overview"><a href='#consoleOverview'>How the Console Works</a></li>
+                  
+ 
+                </ul>             
+              
+
+                <li><a href='#2'>IO</a></li>
+              
+ 
+                <ul class="func-ref">             
+            
+
+                    <li class="type-tiny-icon type-function"><a href='#print'>print( message )</a></li>
+                  
+
+                    <li class="type-tiny-icon type-function"><a href='#prompt'>prompt( message )</a></li>
+                  
+ 
+                </ul>             
+              
+
+              </ul>        
+              </div>
+          
+
+              <div class='section'>
+              <h2><a name='1'>Overview</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-overview'></div><a name='consoleOverview'>How the Console Works</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+                    
+                    <div class='description'>
+                      <p>LuaCanvas can run in one of two modes: graphics and non-graphics.  In the non-graphics mode, it simulates a console with text input and output.  Using this, you can run a more traditional script-style program.</p>
+<p>Lua has its own way of getting input and displaying output.  The output, using the <code>print</code> function, works as expected, but the way that the input function is implemented in the underlying engine is to use a pop-up.  These rapidly get irritating, so LuaCanvas implements a different way with a new function, the <code>prompt</code> function.</p>
+<p>Thus a simple program might be:</p>
+<pre><code> print("Welcome to LuaCanvas.")
+ name = prompt("What is your name?")
+ print("Hello " .. name)
+</code></pre>
+<p><em>Technical details</em>: The script needs to pause to wait for input without freezing the window.  To achieve this, the script is run inside a <em>coroutine</em> which yields when <code>prompt</code> is called and resumes when <code>prompt</code> returns.</p>
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+              <div class='section'>
+              <h2><a name='2'>IO</a></h2>
+              
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='print'>print( message )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>print( message )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>Displays a message in the output pane.  In graphical mode, the output pane is a small panel on the side.  In non-graphical mode, the output pane is the whole window.  A newline is automatically appended to the string.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">message</td>
+                        <td class="parameter-desc"><p>string to be displayed in the output name</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='examples'>
+                      <h4>Examples</h4>                    
+                      
+  
+                      <div id='example-0'>
+print("Hello world")
+x = 3 * 5
+print("3 times 5 is " .. x)
+x,y = 3,5
+print(x,y)
+
+                      </div>
+                          
+                  
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+                  <div class='function'>
+                    <h3><div class='type-icon type-function'></div><a name='prompt'>prompt( message )</a> <a class="toplink" href="#top">top ↑</a></h3>
+                    <div class='function-body'>
+                  
+      
+                    <div class="syntax">  
+                    <h4>Syntax</h4>          
+                    <pre>prompt( message )
+</pre>
+                    </div>
+                      
+                    
+                    <div class='description'>
+                      <p>This inserts a text box into the output pane and waits for the user to type some input.  The user's input is then the return value of the function.  If given an argument, this is displayed before the text box.  Once the user enters some text and presses return, the text box is disabled to indicate that its purpose is over.</p>
+                    </div>
+                      
+                  
+                    <div class='parameters'>
+                    <table>
+                      
+  
+                      <tr>
+                        <td class="parameter-name">message</td>
+                        <td class="parameter-desc"><p>(optional) string to be displayed in the output name</p></td>                
+                      </tr>
+                          
+  
+                    </table>                
+                    </div>
+                      
+                  
+                    <div class='examples'>
+                      <h4>Examples</h4>                    
+                      
+  
+                      <div id='example-1'>
+name = prompt("What is your name?")
+print("Hello " .. name)
+
+                      </div>
+                          
+                  
+                    </div>
+                      
+
+                </div>
+              </div>        
+                  
+
+              </div>        
+              
+
+            </div>
+            <script src="lib/ace.js" type="text/javascript" charset="utf-8"></script>    
+            <script>            
+                var editors = [];
+          
+            
+                editors[0] = new ace.edit("example-0");
+                editors[0].setReadOnly(true);
+                editors[0].setHighlightActiveLine(false);
+                editors[0].setShowInvisibles(false);                
+                editors[0].setTheme("ace/theme/github");
+                editors[0].getSession().setMode("ace/mode/lua");
+                editors[0].resize()
+              
+            
+                editors[1] = new ace.edit("example-1");
+                editors[1].setReadOnly(true);
+                editors[1].setHighlightActiveLine(false);
+                editors[1].setShowInvisibles(false);                
+                editors[1].setTheme("ace/theme/github");
+                editors[1].getSession().setMode("ace/mode/lua");
+                editors[1].resize()
+              
+           
+                $(document).ready(function()
+                {
+                    for( var i = 0; i < editors.length; i++ )
+                    {
+                        var e = editors[i];
+                        var height = e.getSession().getScreenLength() * e.renderer.lineHeight + e.renderer.scrollBar.getWidth();
+                        
+                        $('#example-'+i.toString()).height(height.toString()+'px');
+                        
+                        e.resize();
+                    }    
+                });
+            </script>
+            </body>
+          </html>
+          
