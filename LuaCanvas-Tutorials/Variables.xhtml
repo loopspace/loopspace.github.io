@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd" ><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Algebra in Programming</title>
+</head>
+<body><div id="background"></div><div id="content">
+<p>
+</p>
+
+<h1>Getting Started</h1>
+
+<p>
+</p>
+<ol> <li id="">
+<p>Log on to the computer and launch a web browser </p>
+</li><li id="">
+<p>Navigate to http://loopspace.github.io/LuaCanvas </p>
+</li><li id="">
+<p>Click on the checkbox in the lower right corner, labelled Graphics mode </p>
+</li><li id="">
+<p>The big area in the centre of the screen is where you can type code (we call this the <em>editor</em> region). Clicking on the box labelled Execute will run your code. </p>
+</li></ol>
+<p>
+</p>
+
+<h1>Printing Messages</h1>
+
+<p>
+</p>
+<p >To display a message, we use the print command. Click in the editor region and type:
+</p>
+<pre><code>
+print("hello world")
+</code></pre>
+<p>
+</p>
+<p >Now click Execute to run your program.
+</p>
+<p >Click Edit to get back to the program. Try changing the message.
+</p>
+
+<h1>Storing Information</h1>
+
+<p>
+</p>
+<p >In computer programs, we use <em>variables</em> to store information. A variable is a label which tells the computer what information to use. First we have to store some information. Make sure you are in the editor view and type:
+</p>
+<pre><code>
+name = "Harry Potter"
+</code></pre>
+<p>
+</p>
+<p >If you run this program, not a lot will happen. That's because we've only stored the information, we haven't done anything with it yet. We can combine this with our earlier message. After the line above, type:
+</p>
+<pre><code>
+print("Welcome to Hogwarts,", name)
+</code></pre>
+<p>
+</p>
+<p >(Notice the comma after the " and before name.)
+</p>
+<p >Try changing the name and see what happens.
+</p>
+
+<h1>Strings and Numbers</h1>
+
+<p>
+</p>
+<p >When a computer stores information, it also remembers what <em>type</em> of information it is. A <em>string</em> is a bit like a word; it is made out of letters and other characters, like Harry Potter. Another type of information is a <em>number</em>. By knowing the type of information, the computer is able to do things with that information.
+</p>
+<p >For example, we can take a string and make all its letters lowercase. Following on from the above, type:
+</p>
+<pre><code>
+print(name:lower())
+</code></pre>
+<p>
+</p>
+<p >What do you think you would get if you changed lower to upper?
+</p>
+<p >If we store a number, we can do numbery things with that information. Type:
+</p>
+<pre><code>
+x=3
+print(x)
+print(x+4)
+print(3*x)
+</code></pre>
+<p>
+</p>
+<p >(The character between the 3 and x is an <em>asterisk</em>, *. What operation does it represent?)
+</p>
+
+<h1>Getting Information</h1>
+
+<p>
+</p>
+<p >The last piece of programming that we need today is how to get information. We want to ask the person running the program for information and pass that on to the computer. This means that we want to store it in a variable. Type:
+</p>
+<pre><code>
+x = prompt("Enter something:")
+print(x)
+</code></pre>
+<p>
+</p>
+<p >Run this program. In the text box, type something and press return. Note that the program waits for you to enter something before carrying on.
+</p>
+
+<h1>Planting Vegetables</h1>
+
+<p>
+</p>
+<p >We can put this together with our algebraic expressions to find out what our gardener would plant. Type the following, but in place of the ?s put the right expression (remember to use * for multiplication):
+</p>
+<pre><code>
+m = prompt("How many cabbages did you plant?")
+print("You planted",?,"leeks")
+print("You planted",?,"carrots")
+print("You planted",?,"cauliflowers")
+print("Next year, you'll plant",?,"cabbages")
+</code></pre>
+<p>
+</p>
+
+<h1>Letters are Unknown Numbers</h1>
+
+<p>
+</p>
+<p >When writing the program, you didn't know what number m would be. But you could still tell the computer what to do with it, and once the computer found out what m was it could carry out your instructions.
+</p>
+<p >So in the program, m stands for a number that <em>we don't yet know</em>. But as it will become a known number, we can pretend that it is a number and do numbery things to it such as adding, subtracting, and multiplying.
+</p>
+
+<h1>Do It Yourself</h1>
+
+<p>
+</p>
+<p >Now try the other questions on the sheet, writing programs that will ask for the initial information and give the answers to each part of the question.
+</p>
+</div></body></html>

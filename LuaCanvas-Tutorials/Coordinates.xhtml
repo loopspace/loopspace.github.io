@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN" "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd" ><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Using Coordinates</title>
+<link href="css/mathml.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="css/numberedeqns.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="css/article.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Raleway:300" media="all" rel="stylesheet" type="text/css"/>
+<link href="css/small.css" media="all and (max-width: 767px)" rel="stylesheet" type="text/css"/>
+<link href="css/medium.css" media="all and (min-width: 768px) and (max-width: 1024px)" rel="stylesheet" type="text/css"/>
+<link href="css/large.css" media="all and (min-width: 1025px)" rel="stylesheet" type="text/css"/>
+<script src="js/setwidth.js" type="text/javascript"/><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"/>
+</head>
+<body><div id="background"></div><div id="content">
+<p></p>
+<div id="titlepage">
+<div id="title">
+<p>Using Coordinates</p>
+</div>
+<div id="date">
+<p>2015-09-24</p>
+</div></div>
+<p></p>
+
+<h1>Getting Started</h1>
+
+<p>
+</p>
+<ol> <li id="">
+<p>Log on to the computer and launch a web browser </p>
+</li><li id="">
+<p>Navigate to <code>http://loopspace.github.io/LuaCanvas?project=Grid</code> </p>
+</li><li id="">
+<p>The big area in the centre of the screen is where you can type code (we call this the <em>editor</em> region). Clicking on the box labelled <code>Execute</code> will run your code. When your code is running, clicking on the box labelled <code>Edit</code> will get you back to the editor.
+</p>
+</li><li id="">
+<p>There should be some code already in the editor. Try running it, you should see a coordinate grid drawn on the screen. </p>
+</li></ol>
+<p>
+</p>
+
+<h1>Coordinates</h1>
+
+<p>
+</p>
+<p >You can use coordinates to refer to points on the screen. Just as on paper, a coordinate like (3, 4) means 3 units left and 4 units up. Usually, the origin (that is, (0, 0)) is at the lower left corner of the box and the units are pixels on the screen (so (3, 4) is not very far: 3 dots right and 4 dots up). The grid shifts the origin to the centre of the screen and makes the units bigger.
+</p>
+<p >Now we want to draw something on the screen by joining coordinates with lines. In Maths, we write a coordinate like (3, 4). In programming, we need to explicitly tell the program when we want to refer to a coordinate. In this setting, the way to do this is <code>coordinate(3,4)</code>.
+</p>
+<p >We're going to be writing a lot of coordinates and <code>coordinate(3,4)</code> is a lot to type each time. Fortunately, we can make a shortcut. Click at the end of line 2 and press return to make a new line. Type <code>c=coordinate</code>. This makes <code>c</code> a shortcut or alias for <code>coordinate</code>.
+</p>
+<p >The start of your code should now look like this:
+</p>
+<pre><code>
+function setup()
+
+   g=Grid(20,5)
+   c=coordinate
+end
+</code></pre>
+<p>
+</p>
+
+<h1>Drawing on the Screen</h1>
+
+<p>
+</p>
+<p >To draw on the screen we need to put some instructions somewhere between the line <code>function draw()</code> and the <code>end</code> at the end of the code.
+</p>
+<p >To draw a line between two coordinates we'll use the <code>line</code> command. We can draw a line between two points by writing:
+</p>
+<pre><code>
+line(c(1,2),c(10,-3))
+</code></pre>
+<p>
+</p>
+<p >So to draw a series of lines between points, we repeat this line with each pair of coordinates. These should go after the line <code>g:draw()</code> (which draws the grid) so that they are drawn over the top of the grid. For example:
+</p>
+<pre><code>
+
+   line(c(1,2),c(10,2))
+   line(c(10,2),c(10,7))
+   line(c(10,7),c(1,7))
+   line(c(1,7),c(1,2))
+</code></pre>
+<p>
+</p>
+<p >You can change the thickness of the line and its colour as well. Before the above commands, use:
+</p>
+<pre><code>
+   stroke(150,40,200)
+   strokeWidth(5)
+</code></pre>
+<p>
+</p>
+<p >The first of these changes the colour of the line, the second the width.
+</p>
+<p >The lower part of your code will now look something like this:
+</p>
+<pre><code>
+function draw()
+   background(40,40,50)
+   g:draw()
+   stroke(150,40,200)
+   strokeWidth(5)
+   line(c(1,2),c(10,2))
+   line(c(10,2),c(10,7))
+   line(c(10,7),c(1,7))
+   line(c(1,7),c(1,2))
+end
+</code></pre>
+<p>
+</p>
+
+<h1>Repeating Things</h1>
+
+<p>
+</p>
+<p >Writing things like <code>line(c(1,2),c(10,2))</code> lots of times gets a bit repetitive. Computers are supposed to alleviate things like that. We can make the computer do the hard work for us. We make a list of the coordinates and tell the computer to draw a line between each coordinate and the previous one.
+</p>
+<p >To make our list of points, after our shortcut line (with <code>c=coordinate</code> on it), type <code>points={}</code>. Between the curly braces (the <code>{}</code>) we put the list of coordinates, using a comma between each one. With the coordinates above, we would have:
+</p>
+<pre><code>
+points={c(1,2), c(10,2), c(10,7), c(1,7), c(1,2)}
+</code></pre>
+<p>
+</p>
+<p >You can put it on separate lines if you like, so it can look like:
+</p>
+<pre><code>
+
+   points = {
+      c(1,2),
+      c(10,2),
+      c(10,7),
+      c(1,7),
+      c(1,2)
+
+   }
+</code></pre>
+<p>
+</p>
+<p >To draw the lines between the points, we use what is called a <em>for loop</em>. This is a way of repeating something a set number of times. When we repeat it, we have a <em>counter</em> to keep track of how many times we've repeated it. As the first line is from the first to the second coordinate, we start our counter at 2 and repeat until the end of the list of coordinates. So we start our loop with:
+</p>
+<pre><code>
+for k=2,#points do
+</code></pre>
+<p>
+</p>
+<p >The <code>#points</code> is the number of points in our list. The <code>k</code> is the counter which we can use inside the loop. Each time through the loop it goes up by 1.
+</p>
+<p >To draw a line between the kth coordinate and the previous one, we need to refer to the kth coordinate in our list. We do this by writing <code>points[k]</code>. We also need to refer to the previous coordinate. This is the k - 1th coordinate in our list, so we write <code>points[k-1]</code> to refer to this. To draw the line between them, we write:
+</p>
+<pre><code>
+line(points[k-1],points[k])
+</code></pre>
+<p>
+</p>
+<p >Lastly, we need to tell the program where the repeated instructions finish. This is achieved with an <code>end</code>. So our whole loop looks like this:
+</p>
+<pre><code>
+for k=2,#points do
+
+      line(points[k-1],points[k])
+end
+</code></pre>
+<p>
+</p>
+<p >The full code should now look something like the following:
+</p>
+<pre><code>
+function setup()
+
+   g=Grid(20,5)
+   c=coordinate
+   points={
+
+           c(1,2), c(10,2), c(10,7), c(1,7), c(1,2)
+   }
+end
+
+function draw()
+   background(40,40,50)
+   g:draw()
+   stroke(150,40,200)
+   strokeWidth(5)
+   for k=2,#points do
+
+      line(points[k-1],points[k])
+   end
+end
+</code></pre>
+<p>
+</p>
+
+<h1>Repeating the Repetition</h1>
+
+<p>
+</p>
+<p >Lists can be <em>nested</em>, meaning that we can form lists of lists. As can for-loops. So if we have several lists of coordinates to draw lines with, we can make a list of all of the families of coordinates, and then go through them one by one drawing the lines.
+</p>
+<p >To make the list of lists, in the <code>setup</code> function we have an outer list as before and inside it we list our coordinates as before, but around each family we put curly braces (and put commas between the families):
+</p>
+<pre><code>
+points={
+
+      {
+           c(1,2), c(10,2), c(10,7), c(1,7), c(1,2)
+
+      },
+      {
+
+           c(-1,2), c(-10,2), c(-10,7), c(-1,7), c(-1,2)
+      }
+}
+</code></pre>
+<p>
+</p>
+<p >To go through each list, we need an outer for-loop which goes through the families and an inner for-loop that goes through the points in each family. This looks like:
+</p>
+<pre><code>
+for j=1,#points do
+   for k=2,#points[j] do
+      line(points[j][k-1],points[j][k])
+   end
+end
+</code></pre>
+<p>
+</p>
+<p >Here, <code>points[j][k]</code> refers to the kth coordinate in the jth list of coordinates.
+</p>
+<p >At the end of this, our whole code looks like:
+</p>
+<pre><code>
+function setup()
+   g=Grid(20,5)
+   c=coordinate
+   points={
+      {
+
+           c(1,2), c(10,2), c(10,7), c(1,7), c(1,2)
+      },
+      {
+
+           c(-1,2), c(-10,2), c(-10,7), c(-1,7), c(-1,2)
+      }
+   }
+end
+
+function draw()
+   background(40,40,50)
+   g:draw()
+   stroke(150,40,200)
+   strokeWidth(5)
+   for j=1,#points do
+
+      for k=2,#points[j] do
+         line(points[j][k-1],points[j][k])
+
+      end
+   end
+end
+</code></pre>
+<p>
+</p>
+</div></body></html>
