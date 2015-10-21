@@ -26,3 +26,6 @@
 [submodule "LuaCanvas"]
 	path = LuaCanvas
 	url = https://github.com/loopspace/LuaCanvas.git
+[submodule "Arithmetic"]
+	path = Arithmetic
+	url = git@github.com:loopspace/Arithmetic.git
