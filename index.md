@@ -24,3 +24,8 @@ charset: utf-8
 * [Polyominoes](Polyominoes). This code generates the unique polyominoes of a given size.  Original code available on [github](https://github.com/loopspace/Polyominoes.git).
 
 * [LuaCanvas](LuaCanvas). This code provides a playground for graphical programming using the `lua` language.  Original code available on [github](https://github.com/loopspace/LuaCanvas.git).
+
+* [Arithmetic](Arithmetic).  An HTML5+JavaScript demonstration of the
+  formula for the sum of an arithmetic series.
+  Original code available on [github](https://github.com/loopspace/Arithmetic/tree/master).
+
