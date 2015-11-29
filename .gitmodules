@@ -29,3 +29,6 @@
 [submodule "Arithmetic"]
 	path = Arithmetic
 	url = https://github.com/loopspace/Arithmetic.git
+[submodule "ComplexCanvas"]
+	path = ComplexCanvas
+	url = https://github.com/loopspace/ComplexCanvas.git
