@@ -29,3 +29,5 @@ charset: utf-8
   formula for the sum of an arithmetic series.
   Original code available on [github](https://github.com/loopspace/Arithmetic/tree/master).
 
+* [Complex Canvas](ComplexCanvas). An HTML5+JavaScript program for visualising complex numbers and operations on them.
+  Original code available on [github](https://github.com/loopspace/ComplexCanvas).
