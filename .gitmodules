@@ -35,3 +35,6 @@
 [submodule "ColourPicker"]
 	path = ColourPicker
 	url = https://github.com/loopspace/ColourPicker.git
+[submodule "hypocycloid"]
+	path = hypocycloid
+	url = https://github.com/loopspace/hypocycloid.git

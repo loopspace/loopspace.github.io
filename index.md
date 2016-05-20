@@ -31,3 +31,6 @@ charset: utf-8
 
 * [Complex Canvas](ComplexCanvas). An HTML5+JavaScript program for visualising complex numbers and operations on them.
   Original code available on [github](https://github.com/loopspace/ComplexCanvas).
+
+* [Hypocycloid](hypocycloid).  An HTML5+JavaScript rewrite of [Craig Kaplan's hypocycloids](http://isohedral.ca/hypocycloid-juggling-pattern).
+Original code available on [github](https://github.com/loopspace/hypocycloid).
