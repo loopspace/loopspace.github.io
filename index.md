@@ -34,3 +34,6 @@ charset: utf-8
 
 * [Hypocycloid](hypocycloid).  An HTML5+JavaScript rewrite of [Craig Kaplan's hypocycloids](http://isohedral.ca/hypocycloid-juggling-pattern).
 Original code available on [github](https://github.com/loopspace/hypocycloid).
+
+* [Axes](Axes).  An HTML5+JavaScript program for making axes suitable for printing.
+Original code available on [github](https://github.com/loopspace/axes).

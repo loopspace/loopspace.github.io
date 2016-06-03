@@ -38,3 +38,6 @@
 [submodule "hypocycloid"]
 	path = hypocycloid
 	url = https://github.com/loopspace/hypocycloid.git
+[submodule "Axes"]
+	path = Axes
+	url = https://github.com/loopspace/axes.git
