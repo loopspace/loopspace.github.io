@@ -37,3 +37,33 @@ Original code available on [github](https://github.com/loopspace/hypocycloid).
 
 * [Axes](Axes).  An HTML5+JavaScript program for making axes suitable for printing.
 Original code available on [github](https://github.com/loopspace/axes).
+
+* [Monte Carlo](MonteCarlo). An HTML5+JavaScript program for running experiments in probaility, currently flipping some number of coins. Original code available on [github](https://github.com/loopspace/).
+
+* [Vector Racer](VectorRacer). An HTML5+JavaScript racing game where you control your acceleration at each turn. Original code available on [github](https://github.com/loopspace/VectorRacer).
+
+* [Make a Number](MakeANumber). An HTML5+JavaScript variant of the Countdown Number game. Original code available on [github](https://github.com/loopspace/MakeANumber).
+
+* [Worksheets](Worksheets). A worksheet generator. Original code available on [github](https://github.com/loopspace/Worksheets).
+
+* [jsCanvas](https://jscanvas.mathforge.org). This code provides a playground for graphical programming using javascript. Original code available on [github](https://github.com/loopspace/jsCanvas).
+
+* [Brickout](Brickout). A version of the classic Brickout game written using jsCanvas.
+
+* [WebGL Experiments](WebGL). Some experiments with WebGL. Original code available on [github](https://github.com/loopspace/webgl-experiments).
+
+* [Extra Time Calculator](ExtraTimeCalculator). A little extra time calculator for exams. Original code on [github](https://github.com/loopspace/ExtraTimeCalculator).
+
+* [Magic Calculator](Magic-Calculator). The Magic Calculator, popular with Christmas crackers. Original code on [github](https://github.com/loopspace/Magic-Calculator).
+
+* [Triangle Calculator](TriangleCalculator). A Triangle Calculator, for calculating the side lengths in a right-angled triangle. Original code on [github](https://github.com/loopspace/TriangleCalculator).
+
+* [Text Analyser](TextAnalyser). A preliminary version of a text analyser for gathering statistics on a body of text. Original code on [github](https://github.com/loopspace/TextAnalyser).
+
+* [Modular Calculator](ModularCalculator). A Modular Arithmetic Calculator, for doing arithmetic modulo some integer. Original code on [github](https://github.com/loopspace/ModularCalculator).
+
+* [What's My Function?](WhatsMyFunction). A function guessing game. Original code on [github](https://github.com/loopspace/WhatsMyFunction).
+
+* [Quick Hobby in Javascript](jsHobby). A demonstration of the quick variant of Hobby's path-fitting algorithm in javascript. Original code on [github](https://github.com/loopspace/jsHobby).
+
+* [House of Commons Visualisation](HouseOfCommons).  A fork of the [House of Commons Vote Visualiser](https://github.com/floklimm/houseOfCommonsVotesIllustrations) by [Floklimm](https://github.com/floklimm) for visualising how MPs voted during the Brexit Indicative Votes. 
