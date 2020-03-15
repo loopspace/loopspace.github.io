@@ -1,6 +1,5 @@
 # Loopspace's Code Projects #
 1. [Bernoulli](bernoulli). An HTML5+JavaScript demonstration of the histogram for the sum of Bernoulli distributions (with varying ‘p‘ and ‘n‘). Original code available on [github](https://github.com/loopspace/bernoulli/tree/master).
-1. [Poisson](poisson/). A modification of the sum of Bernoulli distributions program to display a Poisson distribution. Original code available on [github](https://github.com/loopspace/bernoulli/tree/poisson).
 1. [Statistics](statistics/). An HTML5+JavaScript data summariser with histogram, frequency table, and a moveable "marker" to find the median and quartiles. Original code available on [github](https://github.com/loopspace/statistics).
 1. [MathJax to MathML](MathJaxToMathML/). A simple webpage that uses MathJax to convert LaTeX-like syntax to MathML. Original code available on [github](https://github.com/loopspace/MathJaxToMathML.git).
 1. [Chaos](chaos/). A simple demonstration of the logistic map leading to chaotic behaviour. Original code available on [github](https://github.com/loopspace/chaos.git).
@@ -16,7 +15,6 @@
 1. [Make a Number](MakeANumber/). An HTML5+JavaScript variant of the Countdown Number game. Original code available on [github](https://github.com/loopspace/MakeANumber).
 1. [Worksheets](Worksheets/). A worksheet generator. Original code available on [github](https://github.com/loopspace/Worksheets).
 1. [jsCanvas](https://jscanvas.mathforge.org). This code provides a playground for graphical programming using ‘javascript‘. Original code available on [github](https://github.com/loopspace/jsCanvas.git).
-1. [WebGL Experiments](webgl-experiments). Some experiments with WebGL. Original code available on [github](https://github.com/loopspace/webgl-experiments.git).
 1. [Extra Time Calculator](Extra-Time-Calculator/). A little extra time calculator for exams. Original code on [github](https://github.com/loopspace/Extra-Time-Calculator.git).
 1. [Magic Calculator](Magic-Calculator/). The *Magic Calculator*, popular with Christmas crackers. Original code on [github](https://github.com/loopspace/Magic-Calculator.git).
 1. [Triangle Calculator](Triangle-Calculator/). A *Triangle Calculator*, for calculating the side lengths in a right-angled triangle. Original code on [github](https://github.com/loopspace/Triangle-Calculator.git).
